@@ -1,0 +1,34 @@
+//Bootstrap
+@import "variables";
+@import "bootstrap";
+@import "font-awesome-4.7.0/scss/font-awesome";
+
+@import "mixins";
+@import "login";
+
+//Partials
+
+@import "user_profile";
+@import "user_posts";
+@import "profile-admin";
+@import "profile";
+
+
+
+@import "placeholder";
+@import "common";
+@import "header";
+@import "primary-menu";
+@import "slider";
+@import "card";
+@import "card-sm";
+@import "card-md";
+@import "card-lg";
+@import "card-rec";
+@import "card-slider";
+@import "page";
+@import "blog";
+@import "section";
+@import "article";
+@import "subscribe";
+@import "footer";

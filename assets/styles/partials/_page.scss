@@ -1,0 +1,20 @@
+.page{
+    margin-top: 123px;
+    background-color: #FFF;
+
+    &.blog-page{
+        background-color: #f5f5f5;
+    }
+}
+.section-page{
+    padding-top: 170px;
+}
+.article-page{
+    margin-top: 135px;
+    @media screen and (max-width: $sm-break){
+        margin-top: 70px;
+    }
+    @media screen and (max-width: $mobile-break){
+        margin-top: 42px;
+    }
+}

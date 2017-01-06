@@ -1,0 +1,197 @@
+.featured-carousel{
+    height: 740px;
+    margin-bottom: 100px;
+    @media screen and (max-width: $mobile-break){
+        height: 455px;
+    }
+    .card{
+        color: #fefefe;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        figure{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 0;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(35, 31, 32, 0.25);
+        z-index: 1;
+      }
+
+      .content{
+        width: 1140px;
+        margin: 0 auto;
+        padding-top: 245px;
+        padding-left: 120px;
+        padding-right: 120px;
+        position: relative;
+        z-index: 20;
+        text-align: center;
+
+        @media screen and (max-width: $mmd-break){
+            padding-top: 200px;
+            padding-left: 92px;
+            padding-right: 92px;
+            width: 750px;
+        }
+
+        @media screen and (max-width: $sm-break){
+            padding-top: 185px;
+            padding-left: 45px;
+            padding-right: 45px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $md-break){
+            width: 100%;
+        }
+
+        .category{
+            margin-bottom: 15px;
+        }
+
+        .article-icon{
+            margin-bottom: 20px;
+        }
+
+        h2{
+            font-size: ((60px / $font-size-base) + $font-unit);
+            margin-bottom: 25px;
+
+            @media screen and (max-width: $md-break){
+                font-size: ((40px / $font-size-base) + $font-unit);
+            }
+            @media screen and (max-width: $sm-mobile-break){
+                width: 100%;
+                font-size: ((30px / $font-size-base) + $font-unit);
+            }
+        }
+
+        time{
+            color: #fefefe;
+            font-size:  ((11px / $font-size-base) + $font-unit);
+        }
+
+        .author{
+            color: $brand-primary;
+            font-size:  ((14px / $font-size-base) + $font-unit);
+            @media screen and (max-width: $sm-mobile-break){
+                display: none;
+            }
+        }
+
+        .prof-data{
+            position: inherit;
+            width: auto;
+            display: inline-block;
+            .image{
+                width: auto;
+            }
+            @media screen and (max-width: $mobile-break){
+                display: none;
+            }
+        }
+
+        p{
+            font-size:  ((18px / $font-size-base) + $font-unit);
+            font-weight: normal;
+            margin-bottom: 29px;
+            @media screen and (max-width: $mobile-break){
+                display: none;
+            }
+        }
+      }
+
+        &.other{
+            .article-icon,
+            .prof-data{
+                display: none;
+            }
+        }
+    }
+
+    .swiper-button-container{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+    }
+
+    .custom-pagination{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 90px;
+      background-color: #000000;
+      z-index: 10;
+      color: $card-text;
+
+      @media screen and (max-width: $sm-break){
+        display: none;
+      }
+
+      > .container{
+        @extend %flexbox;
+      }
+      .pagination-item{
+        cursor: pointer;
+        text-align: center;
+        width: 25%;
+        border-left: solid 1px #4a4a4a;
+        position: relative;
+        &:last-child{
+          border-right: solid 1px #4a4a4a;
+        }
+
+        &.active{
+          &:before{
+            content:'';
+            position: absolute;
+            top:0;
+            left: 72px;
+            right: 72px;
+            height: 4px;
+            background: #fa6d6d;
+          }
+
+          h2{
+            color: inherit;
+          }
+        }
+      }
+
+      .slide-no{
+        display: block;
+        float: left;
+        font-size:  ((26px / $font-size-base) + $font-unit);
+        border-bottom: solid 4px #fefefe;
+        margin-right: 24px;
+      }
+
+      h2{
+        font-size:  ((18px / $font-size-base) + $font-unit);
+        font-weight: 700;
+        text-align: center;
+        padding: 10px 15px;
+        color: #9b9b9b;
+      }
+    }
+
+}

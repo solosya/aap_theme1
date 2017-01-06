@@ -1,0 +1,167 @@
+.article{
+    
+    header{
+        margin-bottom: 10px;
+        @media screen and (max-width: $sm-break){
+            text-align: center;
+        }
+
+        .section{
+            display: inline-block;
+            background: $brand-primary;
+            color: #FFF;
+            padding: 3px 21px;
+            font-weight: bold;  
+            margin-bottom: 10px;
+
+            @media screen and (max-width: $sm-break){
+                display: block;
+                margin-bottom: 28px;
+            }
+        }
+        time{
+            display: block;
+            font-size: ((13px / $font-size-base) + $font-unit);
+            margin-bottom: 13px;
+        }
+        .social-links{
+            list-style: none;
+            padding-left: 0;
+            @extend %flexbox;
+
+            @media screen and (max-width: $sm-break){
+                display: inline-block;
+                text-align: center;
+                li{
+                    display: inline-block;
+                }
+            }
+
+            @media screen and (max-width: $mobile-break){
+                display: none;
+            }
+        }
+    }
+
+    > article{
+        margin-bottom: 130px;
+    }
+
+    figure{
+        position: relative;
+        margin-bottom: 70px;
+        img{
+            max-width: 100%;
+        }
+        figcaption{
+            position: absolute;
+            bottom:0;
+            left: 0;
+            color: #FFF;
+            background: #000;
+            font-size: ((15px / $font-size-base) + $font-unit);
+            font-style: italic;
+            padding:5px 15px;
+
+            @media screen and (max-width: $mobile-break){
+                position: inherit;
+            }
+        }
+    }
+
+    .content-main{
+        font-size: ((18px / $font-size-base) + $font-unit);
+        line-height: 1.56;
+        letter-spacing: 0.7px;
+        @media screen and (max-width: $sm-break){
+            font-size: ((17px / $font-size-base) + $font-unit);
+        }
+        img{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            max-width: 100%;
+        }
+    }
+
+    .author{
+        text-align: center;
+
+        @media screen and (max-width: $sm-break){
+            &:after{
+                content: '';
+                width: 165px;
+                height: 1px;
+                background: #979797;
+                margin: 0 auto;
+                display: inline-block;
+            }
+        }
+        img{
+            width: 50px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .author-name{
+            display: block;
+            font-weight: 500;
+            color: $brand-primary;
+            margin-bottom: 5px;
+        }
+        time{
+            font-size: ((13px / $font-size-base) + $font-unit);
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #000000;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .btn{
+            border: 1px solid #4a4a4a;
+            border-radius: 4px;
+            color: #4a4a4a;
+            margin-bottom: 18px;
+            font-weight: bold;
+        }
+        hr{
+            border-color: #979797;
+        }
+        h4{
+            margin-top: 9px;
+            margin-bottom: 9px;
+            font-size: ((15px / $font-size-base) + $font-unit);
+            font-weight: normal;
+            letter-spacing: 2.3px;
+            color: #000000;
+            text-transform: uppercase;
+            text-align: left;
+            font-family: "roboto", Helvetica, Arial, sans-serif;
+        }
+        p{
+            font-size:((15px / $font-size-base) + $font-unit);
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.33;
+            letter-spacing: 0.6px;
+            text-align: left;
+            color: #4a4a4a;
+        }
+    }
+
+    .article-actions{
+        margin-top: 20px;
+    }
+    
+    .related-posts{
+        margin-bottom: 131px;
+        @media screen and (max-width: $mobile-break){
+            display: none;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 37px;
+        }
+    }
+}

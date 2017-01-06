@@ -1,0 +1,73 @@
+.site-header{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100px;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    .navbar-brand{
+        padding: 24px 0;
+        overflow: hidden;
+        @extend %flexbox;
+        @extend %transition;
+        img{
+            @extend %transition;
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-block;
+            margin-right: 15px;
+            width: $logo-width;
+            height: $logo-height;
+        }
+
+        .logo-name{
+            @extend %transition;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+            color: #FFF;
+            padding-top: 15px;
+        }
+    }
+
+    .site-header-menu{
+        position: static;
+    }
+
+    &.stick{
+        height: 70px;
+
+        @media screen and (max-width: $mobile-break){
+            height: 42px;
+        }
+        .navbar-brand{
+            padding: 15px 0;
+            height: 70px;
+            
+            @media screen and (max-width: $mobile-break){
+                height: 42px;
+                padding: 5px 0;
+            }
+
+            img{
+                width: $sticked-logo-width;
+                height: $sticked-logo-height;
+            }
+            .logo-name{
+                display: inline-block;
+                padding-top: 8px;
+            }
+        }
+    }
+
+    .site-branding{
+        @media screen and (max-width: $mobile-break){
+            padding-left: 0;
+        }
+        @media screen and (min-width: $mobile-break){
+            max-width: 315px;
+            min-width: 275px;
+        }
+    }
+}

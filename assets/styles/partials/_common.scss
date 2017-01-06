@@ -1,0 +1,123 @@
+body{
+    background-color: #f5f5f5;
+}
+
+.icon{
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-search{
+	background-image: url(../icons-svg/search.svg);
+	width: 15px;
+    height: 15px;
+}
+
+.icon-submit{
+    background-image: url(../icons-svg/submit-btn.svg);
+    width: 67px;
+    height: 35px;
+}
+
+.social-links .icon{
+    width: 28px;
+    height: 28px;
+    margin-right: 12.5px;
+}
+
+.icon-heart{
+    background-image: url(../icons-svg/heart.svg);
+    width: 28px;
+    height: 26px;
+}
+
+.icon-tag{
+    background-image: url(../icons-svg/tag.svg);
+    width: 20px;
+    height: 28px;
+}
+
+.social-links .icon-faceook{
+    background-image: url(../icons-svg/facebook-circle.svg);
+}
+
+.social-links .icon-twitter{
+    background-image: url(../icons-svg/twitter-circle.svg);
+}
+
+.social-links .icon-google{
+    background-image: url(../icons-svg/google-circle.svg);
+}
+
+.social-links .icon-linkedin{
+    background-image: url(../icons-svg/linkedin-circle.svg);
+}
+
+.social-links .icon-faceook-inverted{
+    background-image: url(../icons-svg/facebook-inverted.svg);
+}
+
+.social-links .icon-twitter-inverted{
+    background-image: url(../icons-svg/twitter-inverted.svg);
+}
+
+.social-links .icon-google-inverted{
+    background-image: url(../icons-svg/google-inverted.svg);
+}
+
+.social-links .icon-linkedin-inverted{
+    background-image: url(../icons-svg/linkedin-inverted.svg);
+}
+.lead{
+    font-size: ((18px / $font-size-base) + $font-unit);
+    line-height: 1.56;
+    font-weight: 900;
+}
+.content-block{
+    margin-bottom: 50px;
+}
+
+#disqus_thread{
+    margin-top: 118px;
+    @media screen and (max-width: $mobile-break){
+        display: none;
+    }
+}
+
+.italic{
+    font-style: italic;
+    font-family: "tinos", Helvetica, Arial, sans-serif;
+}
+
+.row-scroll{
+    @media screen and (max-width: $mmd-break){
+        -webkit-overflow-scrolling: touch;
+        overflow: scroll;
+        overflow-y: hidden;
+        overflow-x: auto;
+
+        > .container{
+            width: 975px;
+            overflow: hidden;
+
+            > div{
+                width: 315px;
+                float: left;
+
+                > .card{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+h1, .h1{
+    @media screen and (max-width: $sm-break){
+        font-size: ((45px / $font-size-base) + $font-unit);
+    }
+    @media screen and (max-width: $mobile-break){
+        font-size: ((34px / $font-size-base) + $font-unit);
+    }
+}

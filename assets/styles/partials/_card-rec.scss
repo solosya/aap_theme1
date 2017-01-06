@@ -1,0 +1,139 @@
+.card-rec{
+    padding-left: 0;
+    padding-right: 0;
+
+    .card{
+        height: 215px;
+        @media screen and (max-width: $mobile-break){
+            height: 100px;
+        }
+
+        &:before{   
+            content: '';
+            background: #FFF;
+            height: 4px;
+            left: 31px;
+            right: 41px;
+            position: absolute;
+            z-index: 1;
+        }
+        .content{
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 94px;
+            @media screen and (max-width: $mobile-break){
+                padding-top: 15px;
+            }
+
+            .author,
+            .article-icon,
+            .category{
+                display: none;
+            }
+
+            h2{
+                display: none;
+            }
+            p{
+                font-size: ((22px / $font-size-base) + $font-unit);
+                font-weight: 700;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+
+                @media screen and (max-width: $mobile-break){
+                    font-size: ((16px / $font-size-base) + $font-unit);
+                }
+            }
+            .prof-data{
+                position: initial;
+                @media screen and (max-width: $mobile-break){
+                    display: none;
+                }
+
+                .image{
+                    display: none,
+                }
+                .info{
+                    .name{
+                        position: absolute;
+                        top: 23px;
+                        left: 20px;
+                        font-size: ((14px / $font-size-base) + $font-unit);
+                    }
+                    .tag{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.other{
+            &:before{
+                background: $brand-primary;
+            }
+            .content{
+                h2{
+                    font-size: ((22px / $font-size-base) + $font-unit);
+                    margin-top: 9px;
+                    display: block;
+
+                    @media screen and (max-width: $mobile-break){
+                        font-size: ((18px / $font-size-base) + $font-unit);
+                    }
+                }
+                .prof-data,
+                p{
+                    display: none
+                }
+            }
+        }
+
+        &.facebook{
+            &:before{
+                background: #3c5a96;
+            }
+        }
+
+        &.twitter{
+            &:before{
+                background: #4a90e2;
+            }
+        }
+
+        &.youtube{
+            &:before{
+                background: #d0021b;
+            }
+        }
+
+        &.vimeo,
+        &.instagram{
+            &:before{
+                background: #FFF;
+            }
+        }
+
+        &.youtube,
+        &.vimeo{
+            .article-icon{
+                @media screen and (max-width: $mobile-break){
+                    display: none;
+                }
+
+                background-image: url(../icons-svg/play.svg);
+                display: block;
+                position: absolute;
+                right: 38px;
+                top: 20px;
+                width: 57px;
+                height: 57px;
+            }
+        }
+
+    }
+
+
+
+}

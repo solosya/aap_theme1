@@ -1,0 +1,120 @@
+.card-lg{
+    .card{
+        height: 340px;
+        text-align: center;
+
+        .content{
+            padding-left: 40px;
+            padding-right: 40px;
+            width: 100%;
+
+            @media screen and (max-width: $mobile-break){
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .article-icon{
+                margin-bottom: 20px;
+            }
+            time{
+                margin-bottom: 42px;
+            }
+            p{
+                text-align: left;
+            }
+        }
+
+        &.twitter,
+        &.facebook,
+        &.instagram{
+            .content{
+                padding-top: 30px;
+                    h2,
+                    .author{
+                        display: none;
+                    }
+                    p{
+                        font-size: ((21px / $font-size-base) + $font-unit);
+                        font-weight: 700;
+                    }
+                    .prof-data{
+                        padding-left: 38px;
+                        padding-right: 38px;
+
+                        @media screen and (max-width: $mobile-break){
+                            padding-left: 15px;
+                            padding-right: 15px;
+                        }
+                        .image{
+                            text-align: left;
+                            width: 11%;
+                            min-width: 50px;
+                            
+                            @media screen and (max-width: $mobile-break){
+                                display: block;
+                                width: 20%;
+                                max-width: 50px;
+                            }
+                        }
+                    }
+            }
+        }
+
+        &.youtube,
+        &.vimeo{
+            .content{
+                padding-top: 36px;
+
+                time{
+                    margin-bottom: 17px;
+                }
+
+                h2{
+                    font-size: ((31px / $font-size-base) + $font-unit);
+                    @media screen and (max-width: $mobile-break){
+                        font-size: ((20px / $font-size-base) + $font-unit);
+                    }
+                }
+
+                p,
+                h2{
+                    text-align: left;
+                }
+
+                .prof-data,
+                .author{
+                    display: none;
+                }
+            }
+        }
+
+        &.other{
+            background: $brand-primary;
+            padding-top: 0;
+            .content{
+                .category{
+                    margin-bottom: 60px;
+                    @media screen and (max-width: $mobile-break){
+                        margin-bottom: 40px;
+                    }
+                }
+
+                h2{
+                    font-size: ((31px / $font-size-base) + $font-unit);
+                    @media screen and (max-width: $mobile-break){
+                        font-size: ((20px / $font-size-base) + $font-unit);
+                    }
+                }
+                time,
+                p,
+                h2,
+                .author{
+                    text-align: left;
+                    display: block;
+                }
+                .prof-data{
+                    display: none;
+                }
+            }
+        }
+    }
+}

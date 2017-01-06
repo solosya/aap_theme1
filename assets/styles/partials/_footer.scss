@@ -1,0 +1,165 @@
+.site-footer{
+    background-color: #272626;
+    padding-top: 44px;
+    padding-bottom: 86px;
+    color: #f5f5f5;
+
+    @media screen and (max-width: $mobile-break){
+        padding-top: 0;
+    }
+
+    .scroll-to-top{
+        display: none;
+        @media screen and (max-width: $mobile-break){
+            display: inline-block;
+            background-color: $brand-primary;
+            color: #FFF;
+            padding: 13px 0;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+        }
+    }
+
+    .widget{
+        @media screen and (max-width: $md-break){
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+    }
+
+    .footer-logo{
+        text-align: center;
+        
+        img{
+            @media screen and (max-width: $mobile-break){
+                display: inline-block;
+            }
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+            width: 34px;
+        }
+
+        .logo-name{
+            @media screen and (max-width: $mobile-break){
+                display: inline-block;
+            }
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 3.1px;
+            color: #9b9b9b;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .copyright{
+            @media screen and (max-width: $mobile-break){
+                display: block;
+            }
+            font-size: ((12px / $font-size-base) + $font-unit);
+            font-weight: normal;
+            letter-spacing: 1.8px;
+            color: #f5f5f5;
+            @media screen and (max-width: $mobile-break){
+                color: $brand-primary;
+            }
+        }
+    }
+
+    ul{
+        list-style: none;
+        padding-left: 0;
+
+        &.menu-1{
+            li{
+                a{
+                    font-size:((14px / $font-size-base) + $font-unit);
+                    font-weight: 900;
+                    letter-spacing: 0.7px;
+                    line-height: 1.79;
+                    color: #f5f5f5;
+                    margin-bottom: 15px;
+                    display: block;
+                }
+            }
+        }
+
+        &.menu-2{
+            li{
+                a{
+                    font-size:((14px / $font-size-base) + $font-unit);
+                    font-weight: bold;
+                    line-height: 1.79;
+                    letter-spacing: 0.7px;
+                    color: #9b9b9b;
+                    margin-bottom: 15px;
+                    display: block;
+                }
+            }
+        }
+
+        &.social-links{
+            @media screen and (max-width: $mobile-break){
+                display: inline-block;
+            }
+            li{
+                @media screen and (max-width: $mobile-break){
+                    float: left;
+                    width: 40px;
+                    overflow: hidden;
+                    height: 27px;
+                }
+
+                a{
+                    font-size:((14px / $font-size-base) + $font-unit);
+                    font-weight: bold;
+                    line-height: ((28px / $font-size-base) + $font-unit);
+                    letter-spacing: 0.7px;
+                    color: #9b9b9b;
+                    @extend %flexbox;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    h5{
+        font-family: "roboto", Helvetica, Arial, sans-serif;
+        font-size:((14px / $font-size-base) + $font-unit);
+        font-weight: 900;
+        line-height: 1.79;
+        letter-spacing: 0.7px;
+        color: #f5f5f5;
+        margin-top: 0;
+
+        @media screen and (max-width: $mobile-break){
+            display: none;
+        }
+    }
+
+    .border-right{
+        min-height: 187px;
+        border-right: solid 1px #9b9b9b;
+        @media screen and (max-width: $md-break){
+            min-height: 235px;
+        }
+        @media screen and (max-width: $mmd-break){
+            min-height: inherit;
+            border: 0;
+        }
+    }
+
+    .space-left{
+        padding-left: 38px;
+        @media screen and (max-width: $md-break){
+            padding-left: 20px;
+        }
+    }
+}
+.mobile-center{
+    @media screen and (max-width: $mobile-break){
+        text-align: center;
+    }
+}

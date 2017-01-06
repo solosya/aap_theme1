@@ -1,0 +1,29 @@
+.subscribe{
+    input{
+        border-radius: 0;
+        width: 73%;
+        display: inline-block;
+        height: 40px;
+        border: 0;
+        border-bottom: 3px solid #fa6d6d;
+
+        @media screen and (max-width: $md-break){
+            width: 75%;
+        }
+        @media screen and (max-width: $mmd-break){
+            width: 88.5%;
+        }
+        @media screen and (max-width: $sm-break){
+            width: 70%;
+        }
+    }
+
+    .btn{
+        padding: 0;
+        border: 0;
+        position: relative;
+        left: -5px;
+        background-color: #fa6d6d;
+        border-radius: 0;
+    }
+}
