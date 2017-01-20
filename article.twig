@@ -50,6 +50,19 @@
 
             <figure>
                 <img src="{{articleImg}}" alt="alt">
+                {% if media.type == 'video' %} 
+                    {% set mediaUrl = "" %}
+                    {% if media.isSystemVideo == 'TRUE'%}
+                        {% set mediaUrl = _Media.getMediaVideoUrl(media, 0, 0,{resource_type: 'video', format: 'mp4'})  %}
+                    {% endif %}
+                <a href="javascript:void(0)" itemprop="video" class="video-overlay video-player" data-source="{{media.source}}" data-video-id="{{media.videoId}}" data-url="{{mediaUrl}}" data-poster="{{media.path}}" data-caption="{{article.title | raw}}">
+                   <div class="icons">
+                       <div class="icon"><i class="fa fa-play"></i></div>
+                   </div>
+                </a>
+
+
+                
                 <figcaption>
                     {{article.media[0].caption | raw}}
                 </figcaption>
