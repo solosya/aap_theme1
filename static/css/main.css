@@ -8256,6 +8256,15 @@ a.card:hover {
   @media screen and (max-width: 620px) {
     .card-sm .card {
       height: 130px; } }
+  .card-sm .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(35, 31, 32, 0.4);
+    z-index: 1; }
   .card-sm .card h2 {
     font-size: 1.69231em; }
   @media screen and (max-width: 620px) {
@@ -8443,7 +8452,7 @@ a.card:hover {
           .card-md .card.other .content h2, .card-md .card.youtube .content h2, .card-md .card.vimeo .content h2 {
             margin-top: 5px; } }
       .card-md .card.other .content p, .card-md .card.youtube .content p, .card-md .card.vimeo .content p {
-        height: 45px;
+        height: 38px;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -8522,6 +8531,15 @@ a.card:hover {
 .card-lg .card {
   height: 340px;
   text-align: center; }
+  .card-lg .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(35, 31, 32, 0.4);
+    z-index: 1; }
   .card-lg .card .content {
     padding-left: 40px;
     padding-right: 40px;
@@ -9156,12 +9174,12 @@ a.card:hover {
 .article > article {
   margin-bottom: 130px; }
 
-.article figure {
+.article figure.mainimage {
   position: relative;
   margin-bottom: 70px; }
-  .article figure img {
+  .article figure.mainimage img {
     max-width: 100%; }
-  .article figure figcaption {
+  .article figure.mainimage figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -9171,7 +9189,7 @@ a.card:hover {
     font-style: italic;
     padding: 5px 15px; }
     @media screen and (max-width: 620px) {
-      .article figure figcaption {
+      .article figure.mainimage figcaption {
         position: inherit; } }
 
 .article .content-main {

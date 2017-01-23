@@ -64,10 +64,10 @@
                     {% if cardClass != 'instagram no-caption' %}  
                         <p>{{ article.excerpt | raw }}</p>
                     {% endif %}
-                    <span class="author">{{ article.createdBy['displayName'] }}</span>
+                    <span class="author">By {{ article.createdBy['displayName'] }}</span>
                     <div class="prof-data">
                         <div class="image">
-                            {# <img src="images/prof-image.jpg" alt="image-alt"> #}
+                            <img src="images/prof-image.jpg" alt="image-alt">
                         </div>
                         <div class="info">
                             <span class="name">Wired</span>
